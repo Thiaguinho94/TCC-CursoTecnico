@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D722347-4529-400E-83ED-7B74B98899B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pesq_MenuPrincipal</RootNamespace>
+    <AssemblyName>Pesq_MenuPrincipal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pesq_Cadastro\Pesq_Cadastro.csproj">
+      <Project>{E078DD7E-3C4F-4B9B-AA75-DF3F8A59970F}</Project>
+      <Name>Pesq_Cadastro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pesq_Caixa\Pesq_Caixa.csproj">
+      <Project>{EE293ACA-4FC0-4696-AC41-1615035BF9BA}</Project>
+      <Name>Pesq_Caixa</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pesq_Consulta\Pesq_Consulta.csproj">
+      <Project>{DE8CE592-E52F-42BA-8621-57089A810CAC}</Project>
+      <Name>Pesq_Consulta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pesq_Financas\Pesq_Financas.csproj">
+      <Project>{F9587FF9-70EC-4F4B-9B71-6BFB9E976C43}</Project>
+      <Name>Pesq_Financas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pesq_Garcon\Pesq_InserirComanda.csproj">
+      <Project>{E5BA863E-AA76-43BD-B3BC-59118EBE012F}</Project>
+      <Name>Pesq_InserirComanda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pesq_Pedido\Pesq_Pedido.csproj">
+      <Project>{CA838B4F-5EFC-4A2E-A1F8-6815590808D4}</Project>
+      <Name>Pesq_Pedido</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pesq_Pesqueiro\Pesq_Pesqueiro.csproj">
+      <Project>{8094F415-E39E-4FEA-ACE4-DA7A89BBB8D6}</Project>
+      <Name>Pesq_Pesqueiro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pesq_Produto\Pesq_Produto.csproj">
+      <Project>{4DB213DC-F466-4D8C-8D82-B858379617FC}</Project>
+      <Name>Pesq_Produto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

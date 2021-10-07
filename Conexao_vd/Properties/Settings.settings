@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Conexao_bd.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=THIAGO-PC\THIAGOAA;Initial Catalog=BD_Pesqueiro;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="Pesq_BD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Provider=sqloledb;Data Source=C:\BD\BD_Pesqueiro.MDF;Initial Catalog=pubs;Integrated Security=SSPI</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
