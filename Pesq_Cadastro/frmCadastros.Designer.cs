@@ -127,7 +127,6 @@
             this.lblTipoCadastro.Size = new System.Drawing.Size(117, 18);
             this.lblTipoCadastro.TabIndex = 0;
             this.lblTipoCadastro.Text = "Tipo de Cadastro:";
-            this.lblTipoCadastro.Click += new System.EventHandler(this.lblTipoCadastro_Click);
             // 
             // cmbTipoCad
             // 
@@ -143,7 +142,7 @@
             this.cmbTipoCad.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbTipoCad.Size = new System.Drawing.Size(157, 23);
             this.cmbTipoCad.TabIndex = 3;
-            this.cmbTipoCad.SelectedIndexChanged += new System.EventHandler(this.cmbTipoCad_SelectedIndexChanged);
+            this.cmbTipoCad.SelectedIndexChanged += new System.EventHandler(this.CmbTipoCad_SelectedIndexChanged);
             // 
             // tbcCadastro
             // 
@@ -163,7 +162,7 @@
             this.tbcCadastro.Size = new System.Drawing.Size(616, 321);
             this.tbcCadastro.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcCadastro.TabIndex = 4;
-            this.tbcCadastro.SelectedIndexChanged += new System.EventHandler(this.tbcCadastro_SelectedIndexChanged);
+            this.tbcCadastro.SelectedIndexChanged += new System.EventHandler(this.TbcCadastro_SelectedIndexChanged);
             // 
             // Funcionario
             // 
@@ -371,7 +370,6 @@
             this.gpbInfoPessoal.TabIndex = 15;
             this.gpbInfoPessoal.TabStop = false;
             this.gpbInfoPessoal.Text = "Informações Pessoais:";
-            this.gpbInfoPessoal.Enter += new System.EventHandler(this.gpbInfoPessoal_Enter);
             // 
             // mtxtDataNascimento
             // 
@@ -398,7 +396,7 @@
             this.mtxtCpf.Name = "mtxtCpf";
             this.mtxtCpf.Size = new System.Drawing.Size(98, 21);
             this.mtxtCpf.TabIndex = 41;
-            this.mtxtCpf.TextChanged += new System.EventHandler(this.mtxtCpf_TextChanged);
+            this.mtxtCpf.TextChanged += new System.EventHandler(this.MtxtCpf_TextChanged);
             // 
             // gpbSexo
             // 
@@ -522,7 +520,6 @@
             this.lblCodFunc.Size = new System.Drawing.Size(68, 18);
             this.lblCodFunc.TabIndex = 0;
             this.lblCodFunc.Text = "Cod. Func:";
-            this.lblCodFunc.Click += new System.EventHandler(this.lblCodFunc_Click);
             // 
             // Fornecedor
             // 
@@ -689,7 +686,7 @@
             this.txtSenhaAtual.Size = new System.Drawing.Size(186, 24);
             this.txtSenhaAtual.TabIndex = 10;
             this.txtSenhaAtual.Visible = false;
-            this.txtSenhaAtual.TextChanged += new System.EventHandler(this.txtSenhaAtual_TextChanged);
+            this.txtSenhaAtual.TextChanged += new System.EventHandler(this.TxtSenhaAtual_TextChanged);
             // 
             // ckbAlterar
             // 
@@ -700,7 +697,7 @@
             this.ckbAlterar.TabIndex = 9;
             this.ckbAlterar.Text = "Alterar Senha";
             this.ckbAlterar.UseVisualStyleBackColor = true;
-            this.ckbAlterar.CheckedChanged += new System.EventHandler(this.ckbAlterar_CheckedChanged);
+            this.ckbAlterar.CheckedChanged += new System.EventHandler(this.CkbAlterar_CheckedChanged);
             // 
             // btnEditar
             // 
@@ -712,7 +709,7 @@
             this.btnEditar.TabIndex = 9;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Visible = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // lblConfiraSenha
             // 
@@ -740,7 +737,7 @@
             this.txtCofirmaSenha.PasswordChar = '*';
             this.txtCofirmaSenha.Size = new System.Drawing.Size(186, 24);
             this.txtCofirmaSenha.TabIndex = 5;
-            this.txtCofirmaSenha.TextChanged += new System.EventHandler(this.txtCofirmaSenha_TextChanged);
+            this.txtCofirmaSenha.TextChanged += new System.EventHandler(this.TxtCofirmaSenha_TextChanged);
             // 
             // txtSenha
             // 
@@ -774,7 +771,7 @@
             this.cmbNomeFunc.Name = "cmbNomeFunc";
             this.cmbNomeFunc.Size = new System.Drawing.Size(186, 26);
             this.cmbNomeFunc.TabIndex = 1;
-            this.cmbNomeFunc.SelectedIndexChanged += new System.EventHandler(this.cmbNomeFunc_SelectedIndexChanged);
+            this.cmbNomeFunc.SelectedIndexChanged += new System.EventHandler(this.CmbNomeFunc_SelectedIndexChanged);
             // 
             // lblNomeFuncionario
             // 
@@ -796,7 +793,7 @@
             this.btnTelefone.Size = new System.Drawing.Size(64, 64);
             this.btnTelefone.TabIndex = 6;
             this.btnTelefone.UseVisualStyleBackColor = true;
-            this.btnTelefone.Click += new System.EventHandler(this.btnTelefone_Click);
+            this.btnTelefone.Click += new System.EventHandler(this.BtnTelefone_Click);
             // 
             // btnSalvar
             // 
@@ -808,7 +805,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(64, 64);
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -820,7 +817,7 @@
             this.btnLimpar.Size = new System.Drawing.Size(64, 64);
             this.btnLimpar.TabIndex = 6;
             this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // btnVoltar
             // 
@@ -832,7 +829,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(64, 64);
             this.btnVoltar.TabIndex = 7;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // lblCep
             // 
@@ -852,7 +849,7 @@
             this.mtxtCep.Name = "mtxtCep";
             this.mtxtCep.Size = new System.Drawing.Size(69, 21);
             this.mtxtCep.TabIndex = 15;
-            this.mtxtCep.TextChanged += new System.EventHandler(this.mtxtCep_TextChanged);
+            this.mtxtCep.TextChanged += new System.EventHandler(this.MtxtCep_TextChanged);
             // 
             // lblEndereco
             // 
@@ -1038,7 +1035,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastros";
             this.Text = "     Cadastro";
-            this.Load += new System.EventHandler(this.frmCadastros_Load);
+            this.Load += new System.EventHandler(this.FrmCadastros_Load);
             this.tbcCadastro.ResumeLayout(false);
             this.Funcionario.ResumeLayout(false);
             this.gpbInfoFuncionario.ResumeLayout(false);

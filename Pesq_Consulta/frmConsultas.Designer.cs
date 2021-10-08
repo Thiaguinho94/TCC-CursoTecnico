@@ -64,7 +64,7 @@
             this.cmbConsultar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbConsultar.Size = new System.Drawing.Size(127, 21);
             this.cmbConsultar.TabIndex = 2;
-            this.cmbConsultar.SelectedIndexChanged += new System.EventHandler(this.cmbConsultar_SelectedIndexChanged);
+            this.cmbConsultar.SelectedIndexChanged += new System.EventHandler(this.CmbConsultar_SelectedIndexChanged);
             // 
             // dgvConsulta
             // 
@@ -80,9 +80,8 @@
             this.dgvConsulta.RowHeadersVisible = false;
             this.dgvConsulta.Size = new System.Drawing.Size(652, 448);
             this.dgvConsulta.TabIndex = 3;
-            this.dgvConsulta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsulta_CellDoubleClick);
-            this.dgvConsulta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvConsulta_KeyDown);
-            this.dgvConsulta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvConsulta_KeyPress);
+            this.dgvConsulta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvConsulta_CellDoubleClick);
+            this.dgvConsulta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DgvConsulta_KeyDown);
             // 
             // txtPesquisar
             // 
@@ -92,7 +91,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(449, 20);
             this.txtPesquisar.TabIndex = 4;
-            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
             // lblPesquisar
             // 
@@ -117,7 +116,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(50, 50);
             this.btnVoltar.TabIndex = 13;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // frmConsultas
             // 
@@ -135,7 +134,7 @@
             this.Name = "frmConsultas";
             this.Text = "Consulta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmConsultas_Load);
+            this.Load += new System.EventHandler(this.FrmConsultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

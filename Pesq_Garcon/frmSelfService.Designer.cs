@@ -87,7 +87,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(40, 40);
             this.btnVoltar.TabIndex = 3;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.button1_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // lblComanda
             // 
@@ -280,7 +280,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGarcon";
             this.Text = "Self- Service";
-            this.Load += new System.EventHandler(this.frmGarcon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.grbTipoRefeicao.ResumeLayout(false);
             this.grbTipoRefeicao.PerformLayout();

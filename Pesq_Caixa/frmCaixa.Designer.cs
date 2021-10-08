@@ -76,7 +76,7 @@
             this.btnFormadePagar.Size = new System.Drawing.Size(75, 75);
             this.btnFormadePagar.TabIndex = 4;
             this.btnFormadePagar.UseVisualStyleBackColor = true;
-            this.btnFormadePagar.Click += new System.EventHandler(this.btnPagar_Click);
+            this.btnFormadePagar.Click += new System.EventHandler(this.BtnPagar_Click);
             // 
             // btnVoltar
             // 
@@ -87,7 +87,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(75, 75);
             this.btnVoltar.TabIndex = 5;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // lblValorTotal
             // 
@@ -119,7 +119,7 @@
             this.btnAddProd.Size = new System.Drawing.Size(75, 75);
             this.btnAddProd.TabIndex = 9;
             this.btnAddProd.UseVisualStyleBackColor = true;
-            this.btnAddProd.Click += new System.EventHandler(this.btnAddProd_Click);
+            this.btnAddProd.Click += new System.EventHandler(this.BtnAddProd_Click);
             // 
             // mtxtPreco
             // 
@@ -150,7 +150,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCaixa";
             this.Text = "CAIXA";
-            this.Load += new System.EventHandler(this.frmCaixa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaixa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

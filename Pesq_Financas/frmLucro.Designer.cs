@@ -107,7 +107,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(59, 57);
             this.btnVoltar.TabIndex = 8;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // grbFiltro
             // 
@@ -138,7 +138,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLucro";
             this.Text = "Lucro";
-            this.Load += new System.EventHandler(this.frmLucro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisa)).EndInit();
             this.grbFiltro.ResumeLayout(false);
             this.grbFiltro.PerformLayout();

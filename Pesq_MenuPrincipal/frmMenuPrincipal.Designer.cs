@@ -1,6 +1,6 @@
 ﻿namespace Pesq_MenuPrincipal
 {
-    partial class frmMenuPrincipal
+    partial class FrmMenuPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.btnSair = new System.Windows.Forms.Button();
             this.ptbMenu = new System.Windows.Forms.PictureBox();
             this.ptbCaixa = new System.Windows.Forms.PictureBox();
@@ -52,7 +52,7 @@
             this.btnSair.Size = new System.Drawing.Size(32, 32);
             this.btnSair.TabIndex = 4;
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // ptbMenu
             // 
@@ -65,7 +65,7 @@
             this.ptbMenu.Size = new System.Drawing.Size(191, 182);
             this.ptbMenu.TabIndex = 2;
             this.ptbMenu.TabStop = false;
-            this.ptbMenu.Click += new System.EventHandler(this.ptbMenu_Click);
+            this.ptbMenu.Click += new System.EventHandler(this.PtbMenu_Click);
             // 
             // ptbCaixa
             // 
@@ -78,7 +78,7 @@
             this.ptbCaixa.Size = new System.Drawing.Size(191, 182);
             this.ptbCaixa.TabIndex = 3;
             this.ptbCaixa.TabStop = false;
-            this.ptbCaixa.Click += new System.EventHandler(this.ptbCaixa_Click);
+            this.ptbCaixa.Click += new System.EventHandler(this.PtbCaixa_Click);
             // 
             // ptbPequeiro
             // 
@@ -91,7 +91,7 @@
             this.ptbPequeiro.Size = new System.Drawing.Size(191, 182);
             this.ptbPequeiro.TabIndex = 7;
             this.ptbPequeiro.TabStop = false;
-            this.ptbPequeiro.Click += new System.EventHandler(this.ptbPequeiro_Click);
+            this.ptbPequeiro.Click += new System.EventHandler(this.PtbPequeiro_Click);
             // 
             // ptbGarcon
             // 
@@ -104,7 +104,7 @@
             this.ptbGarcon.Size = new System.Drawing.Size(191, 182);
             this.ptbGarcon.TabIndex = 9;
             this.ptbGarcon.TabStop = false;
-            this.ptbGarcon.Click += new System.EventHandler(this.ptbGarcon_Click);
+            this.ptbGarcon.Click += new System.EventHandler(this.PtbGarcon_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -127,7 +127,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "                                                     Sistema Integrado - Pesqueir" +
     "o e Restaurante Micaxu";
-            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCaixa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPequeiro)).EndInit();

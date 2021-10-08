@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Pesq.BLL;
 using Objeto;
@@ -17,9 +12,9 @@ namespace Pesq_Produto
         {
             InitializeComponent();
         }
-        BLL bll = new BLL();
+        private readonly BLL bll = new BLL();
 
-        private void frmCad_Produto_Load(object sender, EventArgs e)
+        private void FrmCad_Produto_Load(object sender, EventArgs e)
         {
             /* na parte de Fornecedor ira carregar todos os fornecedores que 
              * esteja cadastro no banco de dados para salvar o cod deele junto com o Produtos.
@@ -27,7 +22,7 @@ namespace Pesq_Produto
 
             DataSet ds = bll.ObtemFornecedor();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-                cmbFornecedor.Items.Add(ds.Tables[0].Rows[i]["Razao_Social"].ToString());
+            { cmbFornecedor.Items.Add(ds.Tables[0].Rows[i]["Razao_Social"].ToString()); }
 
             ds.Clear();
             //THIAGO: Adicionando Todos os produtos do banco dentro da Datagrid
@@ -37,15 +32,15 @@ namespace Pesq_Produto
 
             DataSet dss = bll.ObtemCategoria();
             for (int i = 0; i < dss.Tables[0].Rows.Count; i++)
-                cmbSecao.Items.Add(dss.Tables[0].Rows[i]["Categoria"].ToString());
+            { cmbSecao.Items.Add(dss.Tables[0].Rows[i]["Categoria"].ToString()); }
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
             txtCodProd.Text = "";
             txtDescricao.Text = "";
@@ -53,21 +48,12 @@ namespace Pesq_Produto
             cmbFornecedor.Text = "";
         }
 
-        private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvProdutos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
-        }
-
-        private void txtDescricao_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void dgvProdutos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.RowIndex == -1) return;
-
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
 
             Produto prod = new Produto(int.Parse(dgvProdutos.Rows[e.RowIndex].Cells["Cod_Prod"].Value.ToString())
                                  , dgvProdutos.Rows[e.RowIndex].Cells["Descricao_Prod"].Value.ToString()
@@ -86,7 +72,6 @@ namespace Pesq_Produto
         {
             txtCodProd.Text = prod.Codigo_Produto.ToString();
             txtDescricao.Text = prod.Descricao_Produto;
-            
             mtxtPrecoVenda.Text = prod.Preco_Venda;
             numQtdNova.Value = prod.Quantidade_Nova;
 
@@ -94,7 +79,7 @@ namespace Pesq_Produto
             if (Valor_Desp[0].Length == 1)
             {
                 mtxtPrecoCusto.Mask = "$9.99";
-                mtxtPrecoCusto.Text = prod.Preco_Custo;    
+                mtxtPrecoCusto.Text = prod.Preco_Custo;
             }
             else if (Valor_Desp[0].Length == 2)
             {
@@ -135,19 +120,12 @@ namespace Pesq_Produto
                 mtxtPrecoVenda.Text = prod.Preco_Venda;
             }
 
-
-
-            DataSet ds =  bll.ObtemFornecedor(prod.Codigo_Fornecedor.ToString());
+            DataSet ds = bll.ObtemFornecedor(prod.Codigo_Fornecedor.ToString());
             for (int i = 0; i < cmbFornecedor.Items.Count; i++)
-			{
+            {
                 if (cmbFornecedor.Items[i].ToString() == ds.Tables[0].Rows[0]["Razao_Social"].ToString())
-                    cmbFornecedor.SelectedIndex = i;
-			}
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-
+                { cmbFornecedor.SelectedIndex = i; }
+            }
         }
     }
 }

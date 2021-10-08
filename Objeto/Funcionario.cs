@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Objeto
+﻿namespace Objeto
 {
     public class Funcionario : Endereco
     {
@@ -26,8 +21,8 @@ namespace Objeto
             Departamento = depto;
             Salario = Sal;
             Observacao = Obs;
-            cep = Cep;
-            endereco = End;
+            base.Cep = Cep;
+            Logradouro = End;
             Numero = Num;
             Complemto = Compl;
             Bairro = Bar;
@@ -51,8 +46,8 @@ namespace Objeto
             Cargo = f.Cargo;
             Departamento = f.Departamento;
             Salario = f.Salario;
-            cep = f.cep;
-            endereco = f.endereco;
+            Cep = f.Cep;
+            Logradouro = f.Logradouro;
             Numero = f.Numero;
             Complemto = f.Complemto;
             Bairro = f.Bairro;

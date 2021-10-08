@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Pesq.BLL;
 using Objeto;
@@ -12,22 +6,22 @@ using Objeto;
 
 namespace Pesq_Pedido
 {
-    public partial class frmPedido : Form
+    public partial class FrmPedido : Form
     {
         private Pedido ped = null;
-        private BLL bll = new BLL();
+        private readonly BLL bll = new BLL();
 
-        public frmPedido()
+        public FrmPedido()
         {
             InitializeComponent();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
 
             ped = new Pedido(int.Parse(txtCodPedido.Text.ToString())
@@ -40,7 +34,7 @@ namespace Pesq_Pedido
                             );
 
         }
-        private void btnSelcionarProd_Click(object sender, EventArgs e)
+        private void BtnSelcionarProd_Click(object sender, EventArgs e)
         {
             frmConsultaProduto consulta = new frmConsultaProduto();
             consulta.ShowDialog();
@@ -48,14 +42,9 @@ namespace Pesq_Pedido
 
         }
 
-        private void frmPedido_Load(object sender, EventArgs e)
+        private void FrmPedido_Load(object sender, EventArgs e)
         {
             mtxtDataPedido.Text = DateTime.Today.ToString();
-        }
-
-        private void lblDataEntrega_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

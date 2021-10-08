@@ -87,7 +87,6 @@
             this.lblDescrição.Size = new System.Drawing.Size(101, 16);
             this.lblDescrição.TabIndex = 4;
             this.lblDescrição.Text = "Descrição Produto";
-            this.lblDescrição.Click += new System.EventHandler(this.lblDescrição_Click);
             // 
             // gpbDadoProd
             // 
@@ -107,7 +106,6 @@
             this.gpbDadoProd.TabIndex = 5;
             this.gpbDadoProd.TabStop = false;
             this.gpbDadoProd.Text = "Dados do Produto";
-            this.gpbDadoProd.Enter += new System.EventHandler(this.gpbDadoProd_Enter);
             // 
             // txtQtd
             // 
@@ -137,7 +135,6 @@
             this.mtxtPrecoUnitario.Name = "mtxtPrecoUnitario";
             this.mtxtPrecoUnitario.Size = new System.Drawing.Size(101, 26);
             this.mtxtPrecoUnitario.TabIndex = 24;
-            this.mtxtPrecoUnitario.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtPrecoUnitario_MaskInputRejected);
             // 
             // lblPrecoTotal
             // 
@@ -148,7 +145,6 @@
             this.lblPrecoTotal.Size = new System.Drawing.Size(69, 16);
             this.lblPrecoTotal.TabIndex = 8;
             this.lblPrecoTotal.Text = "Preço Total:";
-            this.lblPrecoTotal.Click += new System.EventHandler(this.lblPrecoTotal_Click);
             // 
             // lblPrecoUnitario
             // 
@@ -169,7 +165,6 @@
             this.lblQtd.Size = new System.Drawing.Size(70, 16);
             this.lblQtd.TabIndex = 6;
             this.lblQtd.Text = "Quantidade:";
-            this.lblQtd.Click += new System.EventHandler(this.lblQtd_Click);
             // 
             // txtDescProduto
             // 
@@ -188,7 +183,6 @@
             this.btnAddProduto.Size = new System.Drawing.Size(75, 75);
             this.btnAddProduto.TabIndex = 6;
             this.btnAddProduto.UseVisualStyleBackColor = true;
-            this.btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
             // 
             // btnCancelar
             // 
@@ -227,7 +221,7 @@
             this.Name = "frmAddProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Produto";
-            this.Load += new System.EventHandler(this.frmAddProduto_Load);
+            this.Load += new System.EventHandler(this.FrmAddProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.gpbDadoProd.ResumeLayout(false);
             this.gpbDadoProd.PerformLayout();

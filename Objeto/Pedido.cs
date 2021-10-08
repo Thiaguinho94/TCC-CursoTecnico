@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Objeto
+﻿namespace Objeto
 {
     public class Pedido : Produto
     {
@@ -20,8 +15,6 @@ namespace Objeto
             Observacao = Obs;
         }
 
-        
-      
         public int Codigo_Pedido
         { get; set; }
 

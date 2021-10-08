@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
+
 
 namespace Pesq_Cadastro
 {
-    class RnCadastro
+    internal class RnCadastro
     {
         public int MAX_ID_FROM_DB { get; set; }
 
-        public bool isCPF(string valor)
+        public bool IsCPF(string valor)
         {
             if (valor == "")
-                return false;
+            { return false; }
 
             valor = valor.Replace(" ", "");
 
@@ -21,8 +18,6 @@ namespace Pesq_Cadastro
 
             int d1, d2;
             int soma = 0;
-            string digitado = "";
-            string calculado = "";
 
             // Pesos para calcular o primeiro digito
             int[] peso1 = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -32,14 +27,14 @@ namespace Pesq_Cadastro
             int[] n = new int[11];
             // Se o tamanho for < 11 entao retorna como inválido
             if (cpf.Length != 11)
-                return false;
+            { return false; }
 
             // Caso coloque todos os numeros iguais
 
-            bool retorna_validacaoCPF = cpf_mesmoNum(cpf);
+            bool retorna_validacaoCPF = Cpf_mesmoNum(cpf);
 
             if (retorna_validacaoCPF == false)
-                return false;
+            { return false; }
             try
             {
                 // Quebra cada digito do CPF
@@ -62,41 +57,32 @@ namespace Pesq_Cadastro
 
             // Calcula cada digito com seu respectivo peso
             for (int i = 0; i <= peso1.GetUpperBound(0); i++)
-                soma += (peso1[i] * Convert.ToInt32(n[i]));
+            { soma += peso1[i] * Convert.ToInt32(n[i]); }
 
             // Pega o resto da divisao
             int resto = soma % 11;
 
-            if (resto == 1 || resto == 0)
-                d1 = 0;
-            else
-                d1 = 11 - resto;
+            d1 = resto == 1 || resto == 0 ? 0 : 11 - resto;
 
             soma = 0;
 
             // Calcula cada digito com seu respectivo peso
             for (int i = 0; i <= peso2.GetUpperBound(0); i++)
-                soma += (peso2[i] * Convert.ToInt32(n[i]));
+            { soma += peso2[i] * Convert.ToInt32(n[i]); }
 
             // Pega o resto da divisao
             resto = soma % 11;
-            if (resto == 1 || resto == 0)
-                d2 = 0;
-            else
-                d2 = 11 - resto;
+            d2 = resto == 1 || resto == 0 ? 0 : 11 - resto;
 
-            calculado = d1.ToString() + d2.ToString();
-            digitado = n[9].ToString() + n[10].ToString();
+            string calculado = d1.ToString() + d2.ToString();
+            string digitado = n[9].ToString() + n[10].ToString();
 
             // Se os ultimos dois digitos calculados bater com
             // os dois ultimos digitos do cpf entao é válido
-            if (calculado == digitado)
-                return (true);
-            else
-                return (false);
+            return calculado == digitado;
         }
 
-        private bool cpf_mesmoNum(string cpf)
+        private bool Cpf_mesmoNum(string cpf)
         {
             switch (cpf)
             {
@@ -120,10 +106,10 @@ namespace Pesq_Cadastro
                     return false;
                 case "99999999999":
                     return false;
+                default:
+                    break;
             }
             return true;
         }
-
-        
     }
 }

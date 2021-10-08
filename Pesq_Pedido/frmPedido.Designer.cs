@@ -1,6 +1,6 @@
 ﻿namespace Pesq_Pedido
 {
-    partial class frmPedido
+    partial class FrmPedido
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPedido));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedido));
             this.lblCodPedido = new System.Windows.Forms.Label();
             this.txtCodPedido = new System.Windows.Forms.TextBox();
             this.lblDescriProduto = new System.Windows.Forms.Label();
@@ -165,7 +165,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(64, 64);
             this.btnSalvar.TabIndex = 12;
             this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -188,7 +188,7 @@
             this.btnSair.Size = new System.Drawing.Size(64, 64);
             this.btnSair.TabIndex = 14;
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // lblDataEntrega
             // 
@@ -198,7 +198,6 @@
             this.lblDataEntrega.Size = new System.Drawing.Size(94, 16);
             this.lblDataEntrega.TabIndex = 15;
             this.lblDataEntrega.Text = "Data de Entrega:";
-            this.lblDataEntrega.Click += new System.EventHandler(this.lblDataEntrega_Click);
             // 
             // gpbCadastro
             // 
@@ -304,7 +303,7 @@
             this.btnSelcionarProd.TabIndex = 28;
             this.btnSelcionarProd.Text = "Selecionar Produto";
             this.btnSelcionarProd.UseVisualStyleBackColor = true;
-            this.btnSelcionarProd.Click += new System.EventHandler(this.btnSelcionarProd_Click);
+            this.btnSelcionarProd.Click += new System.EventHandler(this.BtnSelcionarProd_Click);
             // 
             // mtxtDataPEntrega
             // 
@@ -382,7 +381,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPedido";
             this.Text = "Pedido";
-            this.Load += new System.EventHandler(this.frmPedido_Load);
+            this.Load += new System.EventHandler(this.FrmPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPedido)).EndInit();
             this.gpbCadastro.ResumeLayout(false);
             this.gpbCadastro.PerformLayout();

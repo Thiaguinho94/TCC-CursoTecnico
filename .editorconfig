@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# Default severity for all analyzer diagnostics
+dotnet_analyzer_diagnostic.severity = warning
+
+# IDE0058: O valor da expressão nunca é usado
+dotnet_diagnostic.IDE0058.severity = none

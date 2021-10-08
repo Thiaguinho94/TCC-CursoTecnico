@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Objeto
+﻿namespace Objeto
 {
     public class Produto
     {
 
         public Produto(int Cod_Prod, string Desc_Prod, int Cod_Fornec, int Qtde_Nova,
-                       string Prc_Custo, string Prc_Venda )
+                       string Prc_Custo, string Prc_Venda)
         {
             Codigo_Produto = Cod_Prod;
             Descricao_Produto = Desc_Prod;
@@ -62,7 +57,7 @@ namespace Objeto
         /// <returns></returns>
         public int Quantidade_Total()
         {
-            return this.Quantidade + this.Quantidade_Nova;
+            return Quantidade + Quantidade_Nova;
         }
 
 

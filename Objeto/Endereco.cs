@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Objeto
+﻿namespace Objeto
 {
     public class Endereco
     {
         public Endereco()
         {
-            cep = "";
-            endereco = "";
+            Cep = "";
+            Logradouro = "";
             Numero = 0;
             Complemto = "";
             Bairro = "";
@@ -19,10 +14,10 @@ namespace Objeto
         }
 
 
-        public string cep
+        public string Cep
         { get; set; }
 
-        public string endereco
+        public string Logradouro
         { get; set; }
 
         public int Numero
@@ -33,7 +28,7 @@ namespace Objeto
 
         public string Bairro
         { get; set; }
-        
+
         public string Cidade
         { get; set; }
 

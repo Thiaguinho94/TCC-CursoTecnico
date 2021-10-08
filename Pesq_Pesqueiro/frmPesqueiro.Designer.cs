@@ -117,7 +117,6 @@
             this.grpbCadPeixes.TabIndex = 3;
             this.grpbCadPeixes.TabStop = false;
             this.grpbCadPeixes.Text = "Cadastrar Peixe";
-            this.grpbCadPeixes.Enter += new System.EventHandler(this.grpbCadPeixes_Enter);
             // 
             // mtxtPrecoVara
             // 
@@ -158,7 +157,6 @@
             this.lblTipoVara.Size = new System.Drawing.Size(71, 13);
             this.lblTipoVara.TabIndex = 9;
             this.lblTipoVara.Text = "Tipo de Vara:";
-            this.lblTipoVara.Click += new System.EventHandler(this.lblTipoVara_Click);
             // 
             // mtxtValorPeixe
             // 
@@ -168,7 +166,6 @@
             this.mtxtValorPeixe.Name = "mtxtValorPeixe";
             this.mtxtValorPeixe.Size = new System.Drawing.Size(83, 25);
             this.mtxtValorPeixe.TabIndex = 8;
-            this.mtxtValorPeixe.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtValorPeixe_MaskInputRejected);
             // 
             // lblValorPeixe
             // 
@@ -187,7 +184,7 @@
             this.btnCarregar.TabIndex = 5;
             this.btnCarregar.Text = "...";
             this.btnCarregar.UseVisualStyleBackColor = true;
-            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
+            this.btnCarregar.Click += new System.EventHandler(this.BtnCarregar_Click);
             // 
             // ptbPeixe
             // 
@@ -198,7 +195,6 @@
             this.ptbPeixe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPeixe.TabIndex = 4;
             this.ptbPeixe.TabStop = false;
-            this.ptbPeixe.Click += new System.EventHandler(this.ptbPeixe_Click);
             // 
             // lblNomePeixe
             // 
@@ -246,7 +242,7 @@
             this.btnComprar.Size = new System.Drawing.Size(64, 64);
             this.btnComprar.TabIndex = 30;
             this.btnComprar.UseVisualStyleBackColor = true;
-            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
+            this.btnComprar.Click += new System.EventHandler(this.BtnComprar_Click);
             // 
             // btnVoltar
             // 
@@ -258,7 +254,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(64, 64);
             this.btnVoltar.TabIndex = 29;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // btnLimpar
             // 
@@ -462,7 +458,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPesqueiro";
             this.Text = "Pesqueiro";
-            this.Load += new System.EventHandler(this.frmPesqueiro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grpbCadPeixes.ResumeLayout(false);
             this.grpbCadPeixes.PerformLayout();

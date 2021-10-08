@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
-using Pesq.DAL;
+﻿using System.Data;
 using Objeto;
 
 namespace Pesq.BLL
 {
     public class BLL
     {
-        DAL.DAL da = new DAL.DAL(); //THIAGO: Instanciando a camada de dados que é reponsavel da conexão com a fonte de dados.
+        private readonly DAL.DAL da = new DAL.DAL(); //THIAGO: Instanciando a camada de dados que é reponsavel da conexão com a fonte de dados.
 
 
         #region Obter
@@ -100,7 +95,7 @@ namespace Pesq.BLL
                         OR Descricao_Desp LIKE '%" + pesquisa + @"%'
                         OR Status_Conta ='" + pesquisa + @"'");
 
-        
+
         }
 
         public DataSet ObtemDespesa()
@@ -150,15 +145,14 @@ namespace Pesq.BLL
                                                            + "," + fun.Data_Admissao
                                                            + ",'" + fun.Cargo
                                                            + "','" + fun.Departamento
-                                                           + "'," + fun.cep
-                                                           + ",'" + fun.endereco
+                                                           + "'," + fun.Cep
+                                                           + ",'" + fun.Logradouro
                                                            + "'," + fun.Numero
                                                            + ",'" + fun.Bairro
                                                            + "','" + fun.Cidade
                                                            + "','" + fun.UF
                                                            + "','" + fun.Salario
                                                            + "','" + fun.Observacao + "')");
-                
         }
 
         public void GravarLogin(Login lg)
@@ -197,8 +191,8 @@ namespace Pesq.BLL
                                                   "','" + fornec.Nome_Fantasia +
                                                   "','" + fornec.Representante +
                                                   "','" + fornec.Email_Fornecedor +
-                                                  "','" + fornec.cep +
-                                                  "','" + fornec.endereco +
+                                                  "','" + fornec.Cep +
+                                                  "','" + fornec.Logradouro +
                                                   "', " + fornec.Numero +
                                                   " ,'" + fornec.Complemto +
                                                   "','" + fornec.Bairro +
@@ -296,25 +290,6 @@ namespace Pesq.BLL
 
         #endregion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     }
 }
 

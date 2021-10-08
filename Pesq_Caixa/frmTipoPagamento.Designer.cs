@@ -1,6 +1,6 @@
 ﻿namespace Pesq_Produto
 {
-    partial class frmTipoPagamento
+    partial class FrmTipoPagamento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTipoPagamento));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipoPagamento));
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnConfimarPg = new System.Windows.Forms.Button();
             this.tbPDinheiro = new System.Windows.Forms.TabPage();
@@ -52,7 +52,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(70, 70);
             this.btnVoltar.TabIndex = 6;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // btnConfimarPg
             // 
@@ -115,7 +115,7 @@
             this.lblValorTotal.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValorTotal.Location = new System.Drawing.Point(11, 14);
             this.lblValorTotal.Name = "lblValorTotal";
-            this.lblValorTotal.Size = new System.Drawing.Size(117, 24);
+            this.lblValorTotal.Size = new System.Drawing.Size(114, 24);
             this.lblValorTotal.TabIndex = 1;
             this.lblValorTotal.Text = "Valor Total:";
             // 
@@ -125,7 +125,7 @@
             this.lblValorPago.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValorPago.Location = new System.Drawing.Point(11, 62);
             this.lblValorPago.Name = "lblValorPago";
-            this.lblValorPago.Size = new System.Drawing.Size(112, 24);
+            this.lblValorPago.Size = new System.Drawing.Size(110, 24);
             this.lblValorPago.TabIndex = 0;
             this.lblValorPago.Text = "Valor Pago:";
             // 
@@ -135,7 +135,7 @@
             this.lblTroco.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTroco.Location = new System.Drawing.Point(54, 111);
             this.lblTroco.Name = "lblTroco";
-            this.lblTroco.Size = new System.Drawing.Size(69, 24);
+            this.lblTroco.Size = new System.Drawing.Size(67, 24);
             this.lblTroco.TabIndex = 2;
             this.lblTroco.Text = "Troco:";
             // 

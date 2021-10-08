@@ -44,7 +44,7 @@
             this.dgvProduto.RowHeadersVisible = false;
             this.dgvProduto.Size = new System.Drawing.Size(410, 397);
             this.dgvProduto.TabIndex = 0;
-            this.dgvProduto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellDoubleClick);
+            this.dgvProduto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProduto_CellDoubleClick);
             // 
             // btnVoltar
             // 
@@ -55,7 +55,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(55, 55);
             this.btnVoltar.TabIndex = 1;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // lblPesquisar
             // 
@@ -73,7 +73,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(351, 20);
             this.txtPesquisar.TabIndex = 3;
-            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
             // frmConsultaProduto
             // 
@@ -89,7 +89,7 @@
             this.Name = "frmConsultaProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Produto";
-            this.Load += new System.EventHandler(this.frmConsultaProduto_Load);
+            this.Load += new System.EventHandler(this.FrmConsultaProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

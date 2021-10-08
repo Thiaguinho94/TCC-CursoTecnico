@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Pesq.BLL;
 using Objeto;
@@ -15,7 +11,7 @@ namespace Pesq_Financas
     public partial class frmDespesas : Form
     {
 
-        private BLL bll = new BLL();
+        private readonly BLL bll = new BLL();
         private Despesa desp = new Despesa();
         private string Status_desp;
 
@@ -26,59 +22,54 @@ namespace Pesq_Financas
 
         #region Enventos do form
 
-        private void rdbStatus_CheckedChanged(object sender, EventArgs e)
+        private void RdbStatus_CheckedChanged(object sender, EventArgs e)
         {
             txtPesquisaDesp.Visible = false;
             cmbStatus.Visible = true;
             cmbStatus.Location = txtPesquisaDesp.Location;
         }
 
-        private void rdbCodDescri_CheckedChanged(object sender, EventArgs e)
+        private void RdbCodDescri_CheckedChanged(object sender, EventArgs e)
         {
             txtPesquisaDesp.Visible = true;
             cmbStatus.Visible = false;
         }
 
-        private void frmDespesas_Load(object sender, EventArgs e)
+        private void FrmDespesas_Load(object sender, EventArgs e)
         {
             rdbCodDescri.Checked = true;
             DataSet ds = bll.ObtemDespesa();
             AdicionandoDespesas(ds);
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void BtnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            
+
             txtDecriDesp.Text = "";
             txtObs.Text = "";
             txtPesquisaDesp.Text = "";
-            mtxtValorDesp.Text ="";
+            mtxtValorDesp.Text = "";
             mtxtDataPagamento.Text = DateTime.Today.ToString();
             mtxtDataVencimento.Text = DateTime.Today.ToString();
             rdbPago.Checked = false;
             rdbNaoPago.Checked = false;
 
-            
+
             btnSalvar.Visible = true;
             btnEditar.Visible = false;
 
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
             string valor_despesa = mtxtValorDesp.Text.ToString().Replace("R$", "");
             string data_venc = Convert.ToDateTime(mtxtDataVencimento.Text).ToString("yyyy/MM/dd");
-            string data_pg;
-            if (mtxtDataPagamento.Text != "  /  /")
-                data_pg = Convert.ToDateTime(mtxtDataPagamento.Text).ToString("yyyy/MM/dd");
-            else
-                data_pg = null;
-
+            string data_pg = mtxtDataPagamento.Text != "  /  /" ? Convert.ToDateTime(mtxtDataPagamento.Text).ToString("yyyy/MM/dd") : null;
             desp = new Despesa(txtDecriDesp.Text.ToString()
                                , data_pg
                                , data_venc
@@ -91,7 +82,7 @@ namespace Pesq_Financas
             {
                 bll.GravarDespesa(desp);
                 MessageBox.Show("Despesa salva com sucesso!", "SALVAR", MessageBoxButtons.OK);
-                frmDespesas_Load(sender, e);
+                FrmDespesas_Load(sender, e);
             }
 
             catch (Exception ex)
@@ -100,7 +91,7 @@ namespace Pesq_Financas
             }
         }
 
-        private void rdbPago_CheckedChanged(object sender, EventArgs e)
+        private void RdbPago_CheckedChanged(object sender, EventArgs e)
         {
             Status_desp = "PG";
 
@@ -115,7 +106,7 @@ namespace Pesq_Financas
 
         }
 
-        private void rdbNaoPago_CheckedChanged(object sender, EventArgs e)
+        private void RdbNaoPago_CheckedChanged(object sender, EventArgs e)
         {
             Status_desp = "NPG";
 
@@ -126,11 +117,7 @@ namespace Pesq_Financas
             mtxtDataVencimento.Location = mtxtDataPagamento.Location;
         }
 
-        private void dgvDespesas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void txtPesquisaDesp_TextChanged(object sender, EventArgs e)
+        private void TxtPesquisaDesp_TextChanged(object sender, EventArgs e)
         {
             string pesquisa = txtPesquisaDesp.Text.ToString().Trim();
             DataSet ds = null;
@@ -150,12 +137,12 @@ namespace Pesq_Financas
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
             AdicionandoDespesas(ds);
-           
+
         }
 
-        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataSet ds;
             if (cmbStatus.Text == "Não Pago")
@@ -170,9 +157,12 @@ namespace Pesq_Financas
             }
         }
 
-        private void dgvDespesas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvDespesas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1) return;
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
 
             Despesa dsp = new Despesa(int.Parse(dgvDespesas.Rows[e.RowIndex].Cells["Codigo_Despesa"].Value.ToString())
                                        , dgvDespesas.Rows[e.RowIndex].Cells["Descricao_Despesa"].Value.ToString()
@@ -189,9 +179,9 @@ namespace Pesq_Financas
             btnEditar.Visible = true;
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)
         {
-         //THIAGO: irar pegar a despesa deseja e alterar as informações que o usuario tem para mudar
+            //THIAGO: irar pegar a despesa deseja e alterar as informações que o usuario tem para mudar
 
             Despesa dsp = new Despesa(int.Parse(txtCodigo.Text.ToString())
                                   , txtDecriDesp.Text.ToString()
@@ -211,14 +201,9 @@ namespace Pesq_Financas
             {
                 MessageBox.Show(ex.ToString());
             }
-
-            
-
-
-
         }
 
-        private void dgvDespesas_KeyDown(object sender, KeyEventArgs e)
+        private void DgvDespesas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 46)
             {
@@ -239,13 +224,28 @@ namespace Pesq_Financas
                             {
                                 bll.DeletarDespesa(dsp);
                                 MessageBox.Show("Despesa " + dsp.Descricao_Despesa + " foi removida com sucesso!", "EXCLUIR");
-                                frmDespesas_Load(sender, e);
+                                FrmDespesas_Load(sender, e);
                                 break;
                             }
                         case DialogResult.No:
                             {
                                 break;
                             }
+
+                        case DialogResult.None:
+                            break;
+                        case DialogResult.OK:
+                            break;
+                        case DialogResult.Cancel:
+                            break;
+                        case DialogResult.Abort:
+                            break;
+                        case DialogResult.Retry:
+                            break;
+                        case DialogResult.Ignore:
+                            break;
+                        default:
+                            break;
                     }
                 }
                 catch (Exception ex)
@@ -253,11 +253,9 @@ namespace Pesq_Financas
                     MessageBox.Show(ex.ToString());
                 }
 
- 
+
             }
         }
-       
-
 
         #endregion
 
@@ -267,14 +265,20 @@ namespace Pesq_Financas
         private void AtribuindoValoresEditar(Despesa dsp)
         {
             string[] Valor_Desp = dsp.Valor_Despesa.Split(',');
-            if (Valor_Desp[0].Length == 1)
-                dsp.Valor_Despesa = "   " + Valor_Desp[0] + "," + Valor_Desp[1];
-            else if (Valor_Desp[0].Length == 2)
-                dsp.Valor_Despesa = "  " + Valor_Desp[0] + "," + Valor_Desp[1];
-            else if (Valor_Desp[0].Length == 3)
-                dsp.Valor_Despesa = " " + Valor_Desp[0] + "," + Valor_Desp[1];
-
-
+            switch (Valor_Desp[0].Length)
+            {
+                case 1:
+                    dsp.Valor_Despesa = "   " + Valor_Desp[0] + "," + Valor_Desp[1];
+                    break;
+                case 2:
+                    dsp.Valor_Despesa = "  " + Valor_Desp[0] + "," + Valor_Desp[1];
+                    break;
+                case 3:
+                    dsp.Valor_Despesa = " " + Valor_Desp[0] + "," + Valor_Desp[1];
+                    break;
+                default:
+                    break;
+            }
 
             txtCodigo.Text = dsp.Codigo_Despesa.ToString();
             txtDecriDesp.Text = dsp.Descricao_Despesa;
@@ -284,9 +288,13 @@ namespace Pesq_Financas
             mtxtValorDesp.Text = dsp.Valor_Despesa;
 
             if (dsp.Status_Despesa == "Não Pago")
+            {
                 rdbNaoPago.Checked = true;
+            }
             else
+            {
                 rdbPago.Checked = true;
+            }
         }
 
         private void AdicionandoDespesas(DataSet ds)
@@ -296,9 +304,13 @@ namespace Pesq_Financas
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 if (ds.Tables[0].Rows[i]["Status_Conta"].ToString() == "NPG")
+                {
                     AdicionadoDespNaoPaga(i, ds);
+                }
                 else
+                {
                     AdicionadoDespPaga(i, ds);
+                }
             }
         }
 
@@ -328,11 +340,5 @@ namespace Pesq_Financas
         }
 
         #endregion
-
-      
-
-       
-      
-
     }
 }

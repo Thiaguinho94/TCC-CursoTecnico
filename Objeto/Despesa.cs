@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Objeto
+﻿namespace Objeto
 {
     public class Despesa
     {
@@ -42,7 +37,7 @@ namespace Objeto
 
         public int Codigo_Despesa
         { get; set; }
-        
+
         public string Descricao_Despesa
         { get; set; }
 

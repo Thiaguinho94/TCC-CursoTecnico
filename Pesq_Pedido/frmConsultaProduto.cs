@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Pesq.BLL;
 
@@ -12,15 +7,15 @@ namespace Pesq_Pedido
 {
     public partial class frmConsultaProduto : Form
     {
-        BLL bll = new BLL();
+        private readonly BLL bll = new BLL();
         public string Descricao_Produto = "";
 
         public frmConsultaProduto()
         {
             InitializeComponent();
         }
-        
-        private void frmConsultaProduto_Load(object sender, EventArgs e)
+
+        private void FrmConsultaProduto_Load(object sender, EventArgs e)
         {
             DataSet ds = bll.ObtemProduto();
             dgvProduto.DataSource = ds.Tables[0];
@@ -29,19 +24,19 @@ namespace Pesq_Pedido
             dgvProduto.Columns[0].Width = 400;
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void BtnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void dgvProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Descricao_Produto = dgvProduto.Rows[e.RowIndex].Cells["Descricao_Prod"].Value.ToString();
-            this.Close();
+            Close();
 
         }
 
-        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
             string pesquisar = txtPesquisar.Text.ToString();
 

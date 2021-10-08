@@ -122,7 +122,7 @@
             this.rdbPago.TabStop = true;
             this.rdbPago.Text = "Pago";
             this.rdbPago.UseVisualStyleBackColor = true;
-            this.rdbPago.CheckedChanged += new System.EventHandler(this.rdbPago_CheckedChanged);
+            this.rdbPago.CheckedChanged += new System.EventHandler(this.RdbPago_CheckedChanged);
             // 
             // rdbNaoPago
             // 
@@ -135,7 +135,7 @@
             this.rdbNaoPago.TabStop = true;
             this.rdbNaoPago.Text = "Não Pago";
             this.rdbNaoPago.UseVisualStyleBackColor = true;
-            this.rdbNaoPago.CheckedChanged += new System.EventHandler(this.rdbNaoPago_CheckedChanged);
+            this.rdbNaoPago.CheckedChanged += new System.EventHandler(this.RdbNaoPago_CheckedChanged);
             // 
             // gpbPagamento
             // 
@@ -196,7 +196,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(64, 64);
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -208,7 +208,7 @@
             this.btnLimpar.Size = new System.Drawing.Size(64, 64);
             this.btnLimpar.TabIndex = 16;
             this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // btnVoltar
             // 
@@ -220,7 +220,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(64, 64);
             this.btnVoltar.TabIndex = 17;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // gpbCadDespesa
             // 
@@ -296,7 +296,7 @@
             this.txtPesquisaDesp.Name = "txtPesquisaDesp";
             this.txtPesquisaDesp.Size = new System.Drawing.Size(371, 20);
             this.txtPesquisaDesp.TabIndex = 20;
-            this.txtPesquisaDesp.TextChanged += new System.EventHandler(this.txtPesquisaDesp_TextChanged);
+            this.txtPesquisaDesp.TextChanged += new System.EventHandler(this.TxtPesquisaDesp_TextChanged);
             // 
             // dgvDespesas
             // 
@@ -320,9 +320,9 @@
             this.dgvDespesas.RowHeadersVisible = false;
             this.dgvDespesas.Size = new System.Drawing.Size(535, 458);
             this.dgvDespesas.TabIndex = 21;
-            this.dgvDespesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDespesas_CellDoubleClick);
-            this.dgvDespesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDespesas_CellDoubleClick);
-            this.dgvDespesas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvDespesas_KeyDown);
+            this.dgvDespesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesas_CellDoubleClick);
+            this.dgvDespesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesas_CellDoubleClick);
+            this.dgvDespesas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DgvDespesas_KeyDown);
             // 
             // Codigo_Despesa
             // 
@@ -380,7 +380,7 @@
             this.rdbStatus.TabStop = true;
             this.rdbStatus.Text = "Status";
             this.rdbStatus.UseVisualStyleBackColor = true;
-            this.rdbStatus.CheckedChanged += new System.EventHandler(this.rdbStatus_CheckedChanged);
+            this.rdbStatus.CheckedChanged += new System.EventHandler(this.RdbStatus_CheckedChanged);
             // 
             // rdbCodDescri
             // 
@@ -392,7 +392,7 @@
             this.rdbCodDescri.TabStop = true;
             this.rdbCodDescri.Text = "Código\r\nDescrição\r\n";
             this.rdbCodDescri.UseVisualStyleBackColor = true;
-            this.rdbCodDescri.CheckedChanged += new System.EventHandler(this.rdbCodDescri_CheckedChanged);
+            this.rdbCodDescri.CheckedChanged += new System.EventHandler(this.RdbCodDescri_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -419,7 +419,7 @@
             this.cmbStatus.Size = new System.Drawing.Size(111, 21);
             this.cmbStatus.TabIndex = 25;
             this.cmbStatus.Visible = false;
-            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.CmbStatus_SelectedIndexChanged);
             // 
             // btnEditar
             // 
@@ -432,7 +432,7 @@
             this.btnEditar.TabIndex = 26;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Visible = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // frmDespesas
             // 
@@ -452,7 +452,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDespesas";
             this.Text = "Despesa";
-            this.Load += new System.EventHandler(this.frmDespesas_Load);
+            this.Load += new System.EventHandler(this.FrmDespesas_Load);
             this.gpbPagamento.ResumeLayout(false);
             this.gpbPagamento.PerformLayout();
             this.gpbCadDespesa.ResumeLayout(false);

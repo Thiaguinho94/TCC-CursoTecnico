@@ -1,99 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Pesq_MenuPrincipal
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class FrmMenuPrincipal : Form
     {
-        public frmMenuPrincipal()
+        public FrmMenuPrincipal()
         {
             InitializeComponent();
         }
 
-        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
-        private void ptbMenu_Click(object sender, EventArgs e)
+        private void PtbMenu_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
             menu.ShowDialog();
         }
 
-        private void ptbCaixa_Click(object sender, EventArgs e)
+        private void PtbCaixa_Click(object sender, EventArgs e)
         {
             Pesq_Caixa.frmCaixa caixa = new Pesq_Caixa.frmCaixa();
             caixa.ShowDialog();
-
-
         }
 
         public void Abilitando_DesabilitandoCaixa(bool Abilitar)
         {
-            if (Abilitar == true)
-            {
-                ptbCaixa.Visible = true;
-                
-
-            }
-            else
-            {
-
-                ptbCaixa.Visible = false;
-            }
-
+            ptbCaixa.Visible = Abilitar;
         }
 
         public void Abilitando_DesabilitandoCadastro(bool Abilitar)
         {
-            if (Abilitar == true)
-            {
-                ptbMenu.Visible = true;
-             
-
-            }
-            else
-            {
-
-                ptbMenu.Visible = false;
-            }
-
+            ptbMenu.Visible = Abilitar;
         }
 
         public void Abilitando_DesabilitandoPesqueiro(bool Abilitar)
         {
-            if (Abilitar == true)
-            {
-                ptbPequeiro.Visible = true;
-
-            }
-            else
-            {
-                ptbPequeiro.Visible = false;
-            }
-
+            ptbPequeiro.Visible = Abilitar;
         }
 
-        private void ptbPequeiro_Click(object sender, EventArgs e)
+        public void Abilitando_DesabilitandoMenu(bool Abilitar)
+        {
+            ptbMenu.Visible = Abilitar;
+        }
+
+        private void PtbPequeiro_Click(object sender, EventArgs e)
         {
             Pesq_Pesqueiro.frmPesqueiro pesq = new Pesq_Pesqueiro.frmPesqueiro();
             pesq.ShowDialog();
         }
 
-        private void ptbGarcon_Click(object sender, EventArgs e)
+        private void PtbGarcon_Click(object sender, EventArgs e)
         {
             Pesq_Garcon.frmGarcon garcon = new Pesq_Garcon.frmGarcon();
             garcon.ShowDialog();

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace Pesq.DAL
@@ -10,7 +6,7 @@ namespace Pesq.DAL
     public class DAL
     {
         //THIAGO: é a string de conexão que recebe o caminho do banco.
-        private string connectionString = "Data Source=THIAGO-PC\\THIAGOAA;Initial Catalog=BD_Pesqueiro;Integrated Security=True";
+        private readonly string connectionString = "Data Source=THIAGO-PC\\THIAGOAA;Initial Catalog=BD_Pesqueiro;Integrated Security=True";
 
         public DataSet Select(string Sql)
         {

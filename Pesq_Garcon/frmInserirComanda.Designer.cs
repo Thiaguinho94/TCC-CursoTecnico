@@ -1,6 +1,6 @@
 ﻿namespace Pesq_Garcon
 {
-    partial class frmInserirComanda
+    partial class FrmInserirComanda
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInserirComanda));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInserirComanda));
             this.txtQdtProd = new System.Windows.Forms.TextBox();
             this.lblQtdProd = new System.Windows.Forms.Label();
             this.txtNumComanda = new System.Windows.Forms.TextBox();
@@ -55,14 +55,14 @@
             this.txtQdtProd.Size = new System.Drawing.Size(53, 23);
             this.txtQdtProd.TabIndex = 10;
             this.txtQdtProd.Text = "01";
-            this.txtQdtProd.TextChanged += new System.EventHandler(this.txtQdtProd_TextChanged);
+            this.txtQdtProd.TextChanged += new System.EventHandler(this.TxtQdtProd_TextChanged);
             // 
             // lblQtdProd
             // 
             this.lblQtdProd.AutoSize = true;
             this.lblQtdProd.Location = new System.Drawing.Point(410, 20);
             this.lblQtdProd.Name = "lblQtdProd";
-            this.lblQtdProd.Size = new System.Drawing.Size(78, 16);
+            this.lblQtdProd.Size = new System.Drawing.Size(77, 16);
             this.lblQtdProd.TabIndex = 9;
             this.lblQtdProd.Text = "Qtd. Produto:";
             // 
@@ -118,7 +118,7 @@
             this.lblPrecoToTal.AutoSize = true;
             this.lblPrecoToTal.Location = new System.Drawing.Point(494, 20);
             this.lblPrecoToTal.Name = "lblPrecoToTal";
-            this.lblPrecoToTal.Size = new System.Drawing.Size(68, 16);
+            this.lblPrecoToTal.Size = new System.Drawing.Size(66, 16);
             this.lblPrecoToTal.TabIndex = 19;
             this.lblPrecoToTal.Text = " Preço Total";
             // 
@@ -137,7 +137,7 @@
             this.lblPreco.AutoSize = true;
             this.lblPreco.Location = new System.Drawing.Point(322, 20);
             this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(37, 16);
+            this.lblPreco.Size = new System.Drawing.Size(36, 16);
             this.lblPreco.TabIndex = 17;
             this.lblPreco.Text = "Preço";
             // 
@@ -154,7 +154,7 @@
             this.lblDescrProduto.AutoSize = true;
             this.lblDescrProduto.Location = new System.Drawing.Point(85, 20);
             this.lblDescrProduto.Name = "lblDescrProduto";
-            this.lblDescrProduto.Size = new System.Drawing.Size(105, 16);
+            this.lblDescrProduto.Size = new System.Drawing.Size(104, 16);
             this.lblDescrProduto.TabIndex = 15;
             this.lblDescrProduto.Text = "Descrição Produto:";
             // 
@@ -171,7 +171,7 @@
             this.lblCodProduto.AutoSize = true;
             this.lblCodProduto.Location = new System.Drawing.Point(11, 20);
             this.lblCodProduto.Name = "lblCodProduto";
-            this.lblCodProduto.Size = new System.Drawing.Size(72, 16);
+            this.lblCodProduto.Size = new System.Drawing.Size(71, 16);
             this.lblCodProduto.TabIndex = 0;
             this.lblCodProduto.Text = "Código Prod:";
             // 
@@ -183,7 +183,7 @@
             this.btnEnviar.TabIndex = 12;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.btnEnviar.Click += new System.EventHandler(this.BtnEnviar_Click);
             // 
             // btnCancelar
             // 
@@ -193,7 +193,7 @@
             this.btnCancelar.TabIndex = 13;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // frmInserirComanda
             // 

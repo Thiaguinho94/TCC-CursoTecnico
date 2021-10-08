@@ -43,7 +43,7 @@
             this.btnSair.Size = new System.Drawing.Size(33, 34);
             this.btnSair.TabIndex = 2;
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // pnlLucro
             // 
@@ -54,7 +54,7 @@
             this.pnlLucro.Name = "pnlLucro";
             this.pnlLucro.Size = new System.Drawing.Size(203, 240);
             this.pnlLucro.TabIndex = 3;
-            this.pnlLucro.Click += new System.EventHandler(this.panel1_Click);
+            this.pnlLucro.Click += new System.EventHandler(this.Panel1_Click);
             // 
             // pnlDespesa
             // 
@@ -65,7 +65,7 @@
             this.pnlDespesa.Name = "pnlDespesa";
             this.pnlDespesa.Size = new System.Drawing.Size(214, 224);
             this.pnlDespesa.TabIndex = 4;
-            this.pnlDespesa.Click += new System.EventHandler(this.pnlDespesa_Click);
+            this.pnlDespesa.Click += new System.EventHandler(this.PnlDespesa_Click);
             // 
             // frmFinancas
             // 

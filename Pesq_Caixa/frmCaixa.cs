@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Pesq_Produto;
 
@@ -17,24 +11,19 @@ namespace Pesq_Caixa
             InitializeComponent();
         }
 
-        private void frmCaixa_Load(object sender, EventArgs e)
+        private void BtnVoltar_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void BtnPagar_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void btnPagar_Click(object sender, EventArgs e)
-        {
-            frmTipoPagamento pag = new frmTipoPagamento();
+            FrmTipoPagamento pag = new FrmTipoPagamento();
             pag.ShowDialog();
 
         }
 
-        private void btnAddProd_Click(object sender, EventArgs e)
+        private void BtnAddProd_Click(object sender, EventArgs e)
         {
             frmAddProduto Adicionar_Prod = new frmAddProduto();
             Adicionar_Prod.ShowDialog();

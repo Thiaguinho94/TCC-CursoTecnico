@@ -88,7 +88,6 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(224, 20);
             this.txtDescricao.TabIndex = 3;
-            this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             // 
             // lblQtdNova
             // 
@@ -150,7 +149,6 @@
             this.btnSalvar.Size = new System.Drawing.Size(63, 64);
             this.btnSalvar.TabIndex = 10;
             this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -162,7 +160,7 @@
             this.btnLimpar.Size = new System.Drawing.Size(63, 64);
             this.btnLimpar.TabIndex = 11;
             this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // btnSair
             // 
@@ -174,7 +172,7 @@
             this.btnSair.Size = new System.Drawing.Size(65, 64);
             this.btnSair.TabIndex = 12;
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // txtPesquisa
             // 
@@ -198,8 +196,7 @@
             this.dgvProdutos.ReadOnly = true;
             this.dgvProdutos.Size = new System.Drawing.Size(462, 330);
             this.dgvProdutos.TabIndex = 14;
-            this.dgvProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellContentClick);
-            this.dgvProdutos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProdutos_CellMouseDoubleClick);
+            this.dgvProdutos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvProdutos_CellMouseDoubleClick);
             // 
             // btnGerarEstoque
             // 
@@ -327,7 +324,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmCad_Produto_Load);
+            this.Load += new System.EventHandler(this.FrmCad_Produto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numQtdNova)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.gpbCadProduto.ResumeLayout(false);

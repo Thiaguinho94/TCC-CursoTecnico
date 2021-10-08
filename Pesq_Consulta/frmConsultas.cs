@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Pesq.BLL;
 using Objeto;
@@ -14,19 +9,19 @@ namespace Pesq_Consulta
 {
     public partial class frmConsultas : Form
     {
-        BLL bll = new BLL();
+        private readonly BLL bll = new BLL();
+
         public frmConsultas()
         {
             InitializeComponent();
         }
 
-
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void BtnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void cmbConsultar_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbConsultar_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataSet ds;
 
@@ -45,15 +40,11 @@ namespace Pesq_Consulta
             }
         }
 
-        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
-
             string pesquisa = txtPesquisar.Text.ToString().Trim();
-            DataSet ds = null;
-            if (cmbConsultar.Text == "Funcionário")
-                ds = bll.ObtemFuncionario(pesquisa);//THIAGO: Pegando a pesquisa que o usuario quer e filtrando os funcionario que foi desejados.
-            else
-                ds = bll.ObtemFornecedor(pesquisa);//THIAGO: Pegando a pesquisa que o usuario quer e filtrando os fornecedor que foi desejados.
+            ///THIAGO: Obtendo funcionnario ou fornecedor dependendo do vai estar setado na cmbConsultar
+            DataSet ds = cmbConsultar.Text == "Funcionário" ? bll.ObtemFuncionario(pesquisa) : bll.ObtemFornecedor(pesquisa);
 
             if (pesquisa == "")
             {
@@ -69,13 +60,17 @@ namespace Pesq_Consulta
                 }
             }
             else
+            {
                 dgvConsulta.DataSource = ds.Tables[0];
+            }
         }
 
-        private void dgvConsulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvConsulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1) return;
-
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
 
             if (cmbConsultar.Text == "Funcionário")
             {
@@ -128,18 +123,13 @@ namespace Pesq_Consulta
 
         }
 
-        private void frmConsultas_Load(object sender, EventArgs e)
+        private void FrmConsultas_Load(object sender, EventArgs e)
         {
             txtPesquisar.Select();
             cmbConsultar.SelectedIndex = 0;
         }
 
-        private void dgvConsulta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void dgvConsulta_KeyDown(object sender, KeyEventArgs e)
+        private void DgvConsulta_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 46)
             {
@@ -175,13 +165,28 @@ namespace Pesq_Consulta
                                 {
                                     bll.DeletarFuncionario(func);
                                     MessageBox.Show("Funcionario " + func.Nome_Funcionario + " deletado com sucesso!", "EXCLUIR");
-                                    cmbConsultar_SelectedIndexChanged(sender, e);
+                                    CmbConsultar_SelectedIndexChanged(sender, e);
                                     break;
                                 }
                             case DialogResult.No:
                                 {
                                     break;
                                 }
+
+                            case DialogResult.None:
+                                break;
+                            case DialogResult.OK:
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                            case DialogResult.Abort:
+                                break;
+                            case DialogResult.Retry:
+                                break;
+                            case DialogResult.Ignore:
+                                break;
+                            default:
+                                break;
                         }
 
                     }
@@ -217,13 +222,28 @@ namespace Pesq_Consulta
                                 {
                                     bll.DeletarFornecedor(fornec);
                                     MessageBox.Show("Fornecedor " + fornec.Nome_Fantasia + " deletado com sucesso!", "EXCLUIR");
-                                    cmbConsultar_SelectedIndexChanged(sender, e);
+                                    CmbConsultar_SelectedIndexChanged(sender, e);
                                     break;
                                 }
                             case DialogResult.No:
                                 {
                                     break;
                                 }
+
+                            case DialogResult.None:
+                                break;
+                            case DialogResult.OK:
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                            case DialogResult.Abort:
+                                break;
+                            case DialogResult.Retry:
+                                break;
+                            case DialogResult.Ignore:
+                                break;
+                            default:
+                                break;
                         }
                     }
                     catch (Exception ex)

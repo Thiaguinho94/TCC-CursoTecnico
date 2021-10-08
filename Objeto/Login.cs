@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Objeto
+﻿namespace Objeto
 {
     public class Login : Funcionario
     {
-        
-        public Login(int Cod_Usuario, string usuario,string usuario_v, string senha, string senhanova , string telacesso, int Cod_Fun)
+
+        public Login(int Cod_Usuario, string usuario, string usuario_v, string senha, string senhanova, string telacesso, int Cod_Fun)
         {
             Codigo_Usuario = Cod_Usuario;
             Usuario = usuario;

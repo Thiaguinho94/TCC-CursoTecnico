@@ -54,7 +54,7 @@
             this.ptcCadastro.Size = new System.Drawing.Size(247, 128);
             this.ptcCadastro.TabIndex = 0;
             this.ptcCadastro.TabStop = false;
-            this.ptcCadastro.Click += new System.EventHandler(this.llbCadastro_Click);
+            this.ptcCadastro.Click += new System.EventHandler(this.LlbCadastro_Click);
             // 
             // ptcConsulta
             // 
@@ -67,7 +67,7 @@
             this.ptcConsulta.Size = new System.Drawing.Size(251, 128);
             this.ptcConsulta.TabIndex = 2;
             this.ptcConsulta.TabStop = false;
-            this.ptcConsulta.Click += new System.EventHandler(this.ptcConsulta_Click);
+            this.ptcConsulta.Click += new System.EventHandler(this.PtcConsulta_Click);
             // 
             // ptcPedido
             // 
@@ -79,7 +79,7 @@
             this.ptcPedido.Size = new System.Drawing.Size(247, 137);
             this.ptcPedido.TabIndex = 6;
             this.ptcPedido.TabStop = false;
-            this.ptcPedido.Click += new System.EventHandler(this.lPedido_Click);
+            this.ptcPedido.Click += new System.EventHandler(this.LPedido_Click);
             // 
             // ptcProd
             // 
@@ -92,7 +92,7 @@
             this.ptcProd.Size = new System.Drawing.Size(251, 135);
             this.ptcProd.TabIndex = 8;
             this.ptcProd.TabStop = false;
-            this.ptcProd.Click += new System.EventHandler(this.lProduto_Click);
+            this.ptcProd.Click += new System.EventHandler(this.LProduto_Click);
             // 
             // ptcFinanca
             // 
@@ -105,7 +105,7 @@
             this.ptcFinanca.Size = new System.Drawing.Size(247, 143);
             this.ptcFinanca.TabIndex = 10;
             this.ptcFinanca.TabStop = false;
-            this.ptcFinanca.Click += new System.EventHandler(this.ptcFinanca_Click);
+            this.ptcFinanca.Click += new System.EventHandler(this.PtcFinanca_Click);
             // 
             // ptcVoltar
             // 
@@ -118,7 +118,7 @@
             this.ptcVoltar.Size = new System.Drawing.Size(251, 143);
             this.ptcVoltar.TabIndex = 13;
             this.ptcVoltar.TabStop = false;
-            this.ptcVoltar.Click += new System.EventHandler(this.ptcVoltar_Click_1);
+            this.ptcVoltar.Click += new System.EventHandler(this.PtcVoltar_Click_1);
             // 
             // frmMenu
             // 
@@ -140,7 +140,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptcCadastro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptcConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptcPedido)).EndInit();

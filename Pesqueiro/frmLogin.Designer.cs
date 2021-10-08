@@ -1,6 +1,6 @@
 ﻿namespace Pesqueiro
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.pctbErro = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(111, 20);
             this.txtSenha.TabIndex = 15;
-            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSenha_KeyPress);
             // 
             // pctbErro
             // 
@@ -103,7 +103,7 @@
             this.btnSair.Size = new System.Drawing.Size(64, 64);
             this.btnSair.TabIndex = 10;
             this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // btnEntrar
             // 
@@ -114,7 +114,7 @@
             this.btnEntrar.Size = new System.Drawing.Size(64, 64);
             this.btnEntrar.TabIndex = 9;
             this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // frmLogin
             // 
@@ -135,7 +135,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmLogin__Load);
+            this.Load += new System.EventHandler(this.FrmLogin__Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctbErro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
